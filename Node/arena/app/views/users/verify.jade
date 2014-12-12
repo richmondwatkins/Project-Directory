@@ -1,0 +1,8 @@
+extends ../shared/template
+
+block content
+  h3 Register
+
+  form(action='/verify/#{user._id}', method='POST')
+    input(type='password', name='password', placeholder='Password')
+    button Submit

@@ -1,0 +1,9 @@
+%h1 Students
+%ul#students= render @students
+
+= button_to 'Call Student', call_on_students_path, method: :post
+
+= simple_form_for @student do |f|
+  = f.input :name
+  = f.submit "Create Student"
+

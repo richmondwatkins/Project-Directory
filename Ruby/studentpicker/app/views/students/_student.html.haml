@@ -1,0 +1,10 @@
+%li #{student.name}
+- if student.calledon.nil?
+  %p Not Called on
+- else
+  %p Last called on: #{time_ago_in_words(student.calledon)} ago
+= link_to "delete", student, method: :delete
+%br
+%br
+
+

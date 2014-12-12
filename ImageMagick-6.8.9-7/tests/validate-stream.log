@@ -1,0 +1,12 @@
+1..1
+Version: ImageMagick 6.8.9-7 Q16 x86_64 2014-09-05 http://www.imagemagick.org
+Copyright: Copyright (C) 1999-2014 ImageMagick Studio LLC
+
+ImageMagick Validation Suite (Stream)
+
+validate stream command line program:
+  test 0: ... pass.
+  summary: 1 subtests; 1 passed; 0 failed.
+validation suite: 1 tests; 1 passed; 0 failed.
+ok
+PASS: tests/validate-stream.tap 1

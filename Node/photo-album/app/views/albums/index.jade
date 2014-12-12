@@ -1,0 +1,20 @@
+extends ../shared/template
+
+block content
+  h1 Album List
+
+  form(method='POST', action='/albums', enctype='multipart/form-data')
+    input(type='text', name='title', autofocus=true, placeholder='Title')
+    input(type='date', name='date')
+    input(type='file', name='photos', multiple=true)
+    button Add
+
+  table
+    thead
+      th Title
+      th Date
+    tbody
+      each album in albums
+        tr
+          td: a(href='/albums/#{album._id}')= album.title
+          td= album.date.toDateString()

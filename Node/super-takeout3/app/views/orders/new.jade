@@ -1,0 +1,26 @@
+extends ../shared/template
+
+block content
+  h1= title
+
+  #user= user.email
+  #total $0.00
+
+  button#logout Logout
+
+  button#add Add Row
+
+  form#order(action='/orders', method='post')
+    button Order Food
+    .menu-item
+      a.nuke(href='#') x
+      input(type='number', name='qty')
+      select.menu
+        option Select a Menu
+          each menu in menus
+            option= menu
+      select.dish(name='dishId')
+        option Select a Dish
+
+block scripts
+  script(src='/js/es6/compiled/orders.js')

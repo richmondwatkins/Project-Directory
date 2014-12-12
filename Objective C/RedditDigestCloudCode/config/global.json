@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "RedditDigest": {
+            "applicationId": "rgcqhuw9LAnZu9icqcbgB0AzPIk3mIyDKhIxmcXx", 
+            "masterKey": "UCHQEARsgux88lpvHt8U7bnNMYsrPemIHW8czTnx"
+        }, 
+        "_default": {
+            "link": "RedditDigest"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.3.1"
+    }
+}

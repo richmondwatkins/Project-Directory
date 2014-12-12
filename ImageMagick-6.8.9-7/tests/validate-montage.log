@@ -1,0 +1,27 @@
+validate: delegate library support not built-in `none' (Freetype) @ warning/annotate.c/RenderFreetype/1533.
+validate: delegate library support not built-in `none' (Freetype) @ warning/annotate.c/RenderFreetype/1533.
+validate: delegate library support not built-in `none' (Freetype) @ warning/annotate.c/RenderFreetype/1533.
+validate: delegate library support not built-in `none' (Freetype) @ warning/annotate.c/RenderFreetype/1533.
+validate: delegate library support not built-in `none' (Freetype) @ warning/annotate.c/RenderFreetype/1533.
+validate: delegate library support not built-in `none' (Freetype) @ warning/annotate.c/RenderFreetype/1533.
+validate: delegate library support not built-in `none' (Freetype) @ warning/annotate.c/RenderFreetype/1533.
+validate: delegate library support not built-in `none' (Freetype) @ warning/annotate.c/RenderFreetype/1533.
+validate: delegate library support not built-in `none' (Freetype) @ warning/annotate.c/RenderFreetype/1533.
+1..1
+Version: ImageMagick 6.8.9-7 Q16 x86_64 2014-09-05 http://www.imagemagick.org
+Copyright: Copyright (C) 1999-2014 ImageMagick Studio LLC
+
+ImageMagick Validation Suite (Montage)
+
+validate montage command line program:
+  test 0: ... pass.
+  test 1: -frame 5... pass.
+  test 2: -geometry 13x19+10+5 -gravity Center... pass.
+  test 3: -label %f... pass.
+  test 4: -pointsize 10... pass.
+  test 5: -shadow... pass.
+  test 6: -tile 3x3... pass.
+  summary: 7 subtests; 7 passed; 0 failed.
+validation suite: 7 tests; 7 passed; 0 failed.
+ok
+PASS: tests/validate-montage.tap 1

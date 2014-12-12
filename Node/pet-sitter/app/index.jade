@@ -1,0 +1,37 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title JS++
+    link(rel='stylesheet', href='./css/app.css')
+  body
+    h1 Pet Sitter
+
+  .cont
+    select#gender
+      option Select Gender
+      option Male
+      option Female
+
+    select#species
+      option Select Species
+      option(value='dog.gif') Dog
+      option(value='cat.gif') Cat
+      option(value='reptile.gif') Reptile
+      option(value='kdance2.gif') Human
+
+    input#name(type='text' placeholder='Name')
+    input#age(type='text' placehold='Age')
+
+    button#add Add!
+
+  #pets
+
+    script(src='./js/vendor/traceur.js')
+    script(src='./js/vendor/experimental.js')
+    script(src='./js/vendor/jquery-2.1.0.js')
+    script(src='./js/vendor/lodash-2.4.1.js')
+    script(src='./js/vendor/moment-2.6.0.js')
+    script(src='./js/es6/database.js')
+    script(src='./js/es6/main.js')
+    script(src='./js/es6/pets.js')

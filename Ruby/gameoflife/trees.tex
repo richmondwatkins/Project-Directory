@@ -1,0 +1,201 @@
+\documentclass{beamer}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\title{Tree Data Structures}
+\tikzset{
+    nb/.style = {treenode, circle, black, draw=black},
+    invisible/.style={opacity=0},
+    visible on/.style={alt=#1{}{invisible}},
+    alt/.code args={<#1>#2#3}{%
+        \alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}}
+    }
+}
+\begin{document}
+    \frame{\titlepage}
+    \frame{
+        \frametitle{Tree Data Structures}
+        \framesubtitle{Properties of Trees}
+        \begin{enumerate}
+            \item<1-> One node is distinguished as the root.
+            \item<2-> Every node $c$, except root, is connected by an edge from exactly one other node $p$. Node $p$ is $c$'s $parent$, and $c$ is one of $p$'s $children$.
+            \item<3-> The path from the root to any node is unique. The number of edges traverse is called the $path$ $length$.
+        \end{enumerate}
+    }
+    \frame{
+        \frametitle{Tree Data Structures}
+        \framesubtitle{Yeah And...}
+        \begin{itemize}
+            \item In a $Binary$ $Tree$ no node can have more than two children.
+            \item There are a special class of trees called $Binary$ $Search$ $Trees$.
+        \end{itemize}
+    }
+    \frame{
+        \frametitle{Tree Data Structures}
+        \framesubtitle{But Why Trees?}
+        Because finding things in LinkedLists is slooooow when the lists are large.
+        \newline
+        \newline
+        \small{$Hint$: Remember the main difference between arrays and linked lists.}
+    }
+    \frame{
+        \frametitle{Tree Data Structures}
+        \framesubtitle{Examples of Binary Trees}
+        \begin{itemize}
+            \item Filesystems
+            \item Expression Trees (Wut?)
+            \item Indexing/Finding stuff
+        \end{itemize}
+    }
+    \frame{
+        \frametitle{Tree Data Structures}
+        \framesubtitle{Binary Tree Insertion}
+        \subsection*{Binary Search Tree order Property}
+        For every node $X$, all nodes on the left subtree have smaller values than $X$, and all nodes in the right subtree have values larger than $X$.
+    }
+    \frame{
+        \frametitle{Tree Data Structures}
+        \framesubtitle{Binary Tree Traversal}
+        \begin{itemize}
+            \item Breadth First
+            \item Depth First
+            \item Binary Search
+        \end{itemize}
+    }
+    \frame{
+        \frametitle{Tree Data Structures}
+        \framesubtitle{Binary Tree Traversal}
+        Find 38, using the three tree traversal methods.
+        \begin{center}
+        \begin{tikzpicture}[->,>=stealth,level/.style={sibling distance = 4cm/#1,level distance = 1.5cm}]
+            \node[nb]{33}
+                child {node[nb]{15}
+                    child {node[nb]{10}
+                    }
+                    child {node[nb]{20}
+                    }
+                }
+                child {node[nb]{47}
+                    child {node[nb]{38}
+                        child {node[nb]{36}
+                        }
+                        child[invisible] {node[nb]{39}
+                        }
+                    }
+                    child {node[nb]{51}
+                    }
+                }
+        \end{tikzpicture}
+        \end{center}
+    }
+    \frame{
+        \frametitle{Tree Data Structures}
+        \framesubtitle{Binary Tree Insertion}
+        Insert 39
+        \begin{center}
+        \begin{tikzpicture}[->,>=stealth,level/.style={sibling distance = 4cm/#1,
+          level distance = 1.5cm}]
+            \node[nb]{33}
+                child {node[nb]{15}
+                    child {node[nb]{10}
+                    }
+                    child {node[nb]{20}
+                    }
+                }
+                child {node[nb]{47}
+                    child {node[nb]{38}
+                        child {node[nb]{36}
+                        }
+                        child[visible on=<2->] {node[nb]{39}
+                        }
+                    }
+                    child {node[nb]{51}
+                    }
+                }
+        \end{tikzpicture}
+        \end{center}
+    }
+    \frame{
+        \frametitle{Tree Data Structures}
+        \framesubtitle{Recursion}
+        \begin{itemize}
+            \item<1-> What is recursion?
+            \item<2-> What are some examples of recursion in nature?
+            \item<3-> How do you caclulate binary tree height recursively?
+        \end{itemize}
+    }
+    \frame{}
+    \frame{
+        \begin{center}
+        \huge{Conway's Game of Life}
+        \newline
+        \newline
+        \large{A Dive into Test Driven Development}
+        \end{center}
+    }
+    \frame{
+        \frametitle{Conway's Game of Life}
+        \framesubtitle{Our Goal}
+        \begin{itemize}
+            \item Learn how to work in a small team.
+            \item Learn how to digest a problem with little guidance.
+            \item Learn how to use testing to solve a problem.
+        \end{itemize}
+    }
+    \frame{
+        \frametitle{Conway's Game of Life}
+        \framesubtitle{Get the Files}
+        https://github.com/jcockhren/gameoflife
+    }
+    \frame{
+        \frametitle{Conway's Game of Life}
+        \framesubtitle{The $How$ and $What$ of Testing}
+        \begin{itemize}
+            \item What does a testing suite look like?
+            \item What should you test?
+            \item What things should one consider before writing your first test?
+            \item How many asserts should you have per test?
+        \end{itemize}
+    }
+    \frame{
+        \frametitle{Conway's Game of Life}
+        \framesubtitle{The Rules}
+        \begin{enumerate}
+            \item Any live cell with fewer than two live neighbours dies, as if caused by under-population.
+            \item Any live cell with two or three live neighbours lives on to the next generation.
+            \item Any live cell with more than three live neighbours dies, as if by overcrowding.
+            \item Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
+        \end{enumerate}
+    }
+    \frame{
+        \frametitle{Conway's Game of Life}
+        \framesubtitle{Rules of Engagement}
+        \begin{itemize}
+            \item Work in pairs
+            \item You have 45 minutes per session
+            \item Erase all your code at the end of each session and switch partners.
+            \item no gems
+            \item Internet solutions are a no-no
+        \end{itemize}
+    }
+    \frame{
+        \frametitle{Conway's Game of Life}
+        \framesubtitle{How to Win}
+        \begin{itemize}
+            \item Implement Conway's rules
+            \item Verify correctness using 2 Still Lifes and 2 Oscillators (i.e. passing tests).
+        \end{itemize}
+    }
+    \frame{
+        \frametitle{Conway's Game of Life}
+        \framesubtitle{Bootstrap}
+        \begin{itemize}
+            \item Focus on how you want to store the data.
+            \item How will you define a live cell?
+            \item How will you define a 'world'?
+        \end{itemize}
+    }
+    \frame{
+        \frametitle{Slides Available Below}
+        https://github.com/jcockhren/trees-conway
+    }
+\end{document}

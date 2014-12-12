@@ -1,0 +1,21 @@
+# Test environment
+top_srcdir='/Users/richmondwatkins/Documents/Code/ImageMagick-6.8.9-7'
+top_builddir='/Users/richmondwatkins/Documents/Code/ImageMagick-6.8.9-7'
+
+set -a
+COMPARE="/Users/richmondwatkins/Documents/Code/ImageMagick-6.8.9-7/utilities/compare"
+COMPOSITE="/Users/richmondwatkins/Documents/Code/ImageMagick-6.8.9-7/utilities/composite"
+CONJURE="/Users/richmondwatkins/Documents/Code/ImageMagick-6.8.9-7/utilities/conjure"
+CONVERT="/Users/richmondwatkins/Documents/Code/ImageMagick-6.8.9-7/utilities/convert"
+DISPLAY="/Users/richmondwatkins/Documents/Code/ImageMagick-6.8.9-7/utilities/display"
+IDENTIFY="/Users/richmondwatkins/Documents/Code/ImageMagick-6.8.9-7/utilities/identify"
+MONTAGE="/Users/richmondwatkins/Documents/Code/ImageMagick-6.8.9-7/utilities/montage" 
+VALIDATE="/Users/richmondwatkins/Documents/Code/ImageMagick-6.8.9-7/tests/validate"
+DRAWTEST="/Users/richmondwatkins/Documents/Code/ImageMagick-6.8.9-7/tests/drawtest"
+WANDTEST="/Users/richmondwatkins/Documents/Code/ImageMagick-6.8.9-7/tests/wandtest"
+LD_LIBRARY_PATH="/Users/richmondwatkins/Documents/Code/ImageMagick-6.8.9-7/magick/.libs:${LD_LIBRARY_PATH}"
+MAGICK_CODER_MODULE_PATH="/Users/richmondwatkins/Documents/Code/ImageMagick-6.8.9-7/coders"
+MAGICK_CONFIGURE_PATH="/Users/richmondwatkins/Documents/Code/ImageMagick-6.8.9-7/config:/Users/richmondwatkins/Documents/Code/ImageMagick-6.8.9-7/config"
+MAGICK_FILTER_MODULE_PATH="/Users/richmondwatkins/Documents/Code/ImageMagick-6.8.9-7/filters"
+PATH="/Users/richmondwatkins/Documents/Code/ImageMagick-6.8.9-7/utilities:/Users/richmondwatkins/Documents/Code/ImageMagick-6.8.9-7/tests:${PATH}"
+set +a
